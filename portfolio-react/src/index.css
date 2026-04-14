@@ -1,0 +1,189 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-headline: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-on-error: #690005;
+  --color-on-primary-fixed: #002109;
+  --color-error-container: #93000a;
+  --color-tertiary-container: #e96a4a;
+  --color-on-primary: #003914;
+  --color-surface-container-high: #232a39;
+  --color-background: #0c1321;
+  --color-on-surface-variant: #bdcaba;
+  --color-surface-container-low: #151b2a;
+  --color-on-tertiary-fixed-variant: #862208;
+  --color-secondary-fixed-dim: #c0c8cc;
+  --color-primary-fixed: #7ffc97;
+  --color-surface-container: #19202e;
+  --color-surface-variant: #2e3544;
+  --color-on-primary-fixed-variant: #005320;
+  --color-inverse-on-surface: #2a3040;
+  --color-secondary-fixed: #dce4e8;
+  --color-on-surface: #dce2f6;
+  --color-inverse-surface: #dce2f6;
+  --color-tertiary-fixed: #ffdad2;
+  --color-primary-fixed-dim: #62df7d;
+  --color-outline-variant: #3e4a3d;
+  --color-surface: #0c1321;
+  --color-secondary: #c0c8cc;
+  --color-primary: #62df7d;
+  --color-on-error-container: #ffdad6;
+  --color-on-secondary: #2a3235;
+  --color-on-secondary-fixed: #151d20;
+  --color-surface-container-highest: #2e3544;
+  --color-on-primary-container: #003111;
+  --color-on-background: #dce2f6;
+  --color-on-secondary-container: #b1babd;
+  --color-surface-tint: #62df7d;
+  --color-tertiary: #ffb4a2;
+  --color-error: #ffb4ab;
+  --color-primary-container: #1ca64d;
+  --color-on-tertiary-fixed: #3c0700;
+  --color-tertiary-fixed-dim: #ffb4a2;
+  --color-on-tertiary-container: #560e00;
+  --color-surface-container-lowest: #070e1c;
+  --color-secondary-container: #424a4e;
+  --color-inverse-primary: #006e2d;
+  --color-outline: #879485;
+  --color-surface-dim: #0c1321;
+  --color-on-tertiary: #621100;
+  --color-surface-bright: #323949;
+  --color-on-secondary-fixed-variant: #40484b;
+
+  --radius-sm: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-3xl: 0.75rem;
+}
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0c1321;
+    color: #dce2f6;
+    font-family: var(--font-body);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  body *::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  .font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+}
+
+.diagonal-cut {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.diagonal-cut-reverse {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 767px) {
+  .diagonal-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+  }
+
+  .diagonal-cut-reverse {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(
+    circle at top left,
+    rgba(22, 163, 74, 0.15),
+    transparent 40%
+  );
+}
+
+/* Gotas verdes estilo chocolate na hero */
+.hero-choco-drops {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-choco-drop {
+  position: absolute;
+  top: -12vh;
+  left: var(--choco-x, 10%);
+  width: var(--choco-w, 14px);
+  height: var(--choco-h, 26px);
+  border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%;
+  background: linear-gradient(
+    165deg,
+    rgba(127, 252, 151, 0.95) 0%,
+    #62df7d 28%,
+    #1ca64d 62%,
+    #0d4d24 100%
+  );
+  box-shadow:
+    inset 3px 4px 8px rgba(255, 255, 255, 0.28),
+    inset -3px -6px 10px rgba(0, 0, 0, 0.45),
+    0 4px 14px rgba(28, 166, 77, 0.35);
+  opacity: 0;
+  animation: hero-choco-fall linear infinite;
+  animation-duration: var(--choco-dur, 9s);
+  animation-delay: var(--choco-delay, 0s);
+  will-change: transform, opacity;
+}
+
+@keyframes hero-choco-fall {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.75, 0.9) rotate(-4deg);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.92;
+  }
+  18% {
+    transform: translate3d(var(--choco-drift, 14px), 18vh, 0) scale(1, 1.02)
+      rotate(5deg);
+  }
+  38% {
+    transform: translate3d(calc(var(--choco-drift, 14px) * -0.7), 38vh, 0)
+      scale(1.03, 1.08) rotate(-3deg);
+  }
+  58% {
+    transform: translate3d(var(--choco-drift, 14px), 58vh, 0) scale(1, 1.05)
+      rotate(4deg);
+  }
+  78% {
+    transform: translate3d(calc(var(--choco-drift, 14px) * -0.4), 78vh, 0)
+      scale(0.98, 1.1) rotate(-2deg);
+  }
+  96% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(0, 118vh, 0) scale(0.85, 1.15) rotate(2deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-choco-drops {
+    display: none;
+  }
+}

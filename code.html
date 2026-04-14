@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rauan Neves | Fullstack Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#002109",
+                    "error-container": "#93000a",
+                    "tertiary-container": "#e96a4a",
+                    "on-primary": "#003914",
+                    "surface-container-high": "#232a39",
+                    "background": "#0c1321",
+                    "on-surface-variant": "#bdcaba",
+                    "surface-container-low": "#151b2a",
+                    "on-tertiary-fixed-variant": "#862208",
+                    "secondary-fixed-dim": "#c0c8cc",
+                    "primary-fixed": "#7ffc97",
+                    "surface-container": "#19202e",
+                    "surface-variant": "#2e3544",
+                    "on-primary-fixed-variant": "#005320",
+                    "inverse-on-surface": "#2a3040",
+                    "secondary-fixed": "#dce4e8",
+                    "on-surface": "#dce2f6",
+                    "inverse-surface": "#dce2f6",
+                    "tertiary-fixed": "#ffdad2",
+                    "primary-fixed-dim": "#62df7d",
+                    "outline-variant": "#3e4a3d",
+                    "surface": "#0c1321",
+                    "secondary": "#c0c8cc",
+                    "primary": "#62df7d",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#2a3235",
+                    "on-secondary-fixed": "#151d20",
+                    "surface-container-highest": "#2e3544",
+                    "on-primary-container": "#003111",
+                    "on-background": "#dce2f6",
+                    "on-secondary-container": "#b1babd",
+                    "surface-tint": "#62df7d",
+                    "tertiary": "#ffb4a2",
+                    "error": "#ffb4ab",
+                    "primary-container": "#1ca64d",
+                    "on-tertiary-fixed": "#3c0700",
+                    "tertiary-fixed-dim": "#ffb4a2",
+                    "on-tertiary-container": "#560e00",
+                    "surface-container-lowest": "#070e1c",
+                    "secondary-container": "#424a4e",
+                    "inverse-primary": "#006e2d",
+                    "outline": "#879485",
+                    "surface-dim": "#0c1321",
+                    "on-tertiary": "#621100",
+                    "surface-bright": "#323949",
+                    "on-secondary-fixed-variant": "#40484b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0c1321; color: #dce2f6; font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .diagonal-cut { clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+        .diagonal-cut-reverse { clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+        .btn-clip { clip-path: polygon(0 0, 92% 0, 100% 25%, 100% 100%, 8% 100%, 0 75%); }
+        .glass-nav { backdrop-filter: blur(20px); background: rgba(12, 19, 33, 0.4); }
+        .hero-gradient { background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.15), transparent 40%); }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0c1321]/40 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(0,0,0,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+<span class="text-xl font-bold tracking-tighter text-[#62df7d]">Rauan Neves</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-[#62df7d] font-bold border-b-2 border-[#62df7d] pb-1" href="#o-que-faco">O que faço</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-[#c0c8cc] hover:text-[#62df7d] transition-colors" href="#projetos">Projetos</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-[#c0c8cc] hover:text-[#62df7d] transition-colors" href="#sobre">Sobre</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-[#c0c8cc] hover:text-[#62df7d] transition-colors" href="#contato">Contato</a>
+</div>
+<a class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 active:scale-90 transition-transform" href="#contato">Solicitar Orçamento</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 hero-gradient overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex gap-2 flex-wrap">
+<span class="bg-surface-container-high text-primary px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-lg">React</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-lg">Vue</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-lg">Node</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-lg">TypeScript</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-lg">PostgreSQL</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-bold leading-tight tracking-tighter text-on-surface">
+                    Eu construo sistemas que <span class="text-primary">aceleram negócios</span>  apps, sites e ERPs.
+                </h1>
+<p class="text-xl text-secondary max-w-lg leading-relaxed">
+                    Soluções fullstack de alta performance focadas em escalabilidade e experiência do usuário. Do código à infraestrutura.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-bold flex items-center gap-2 hover:translate-y-[-2px] transition-transform" href="#projetos">
+                        Ver Projetos <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline-variant text-on-surface px-8 py-4 font-bold hover:bg-surface-container-high transition-colors" href="#contato">
+                        Entrar em Contato
+                    </a>
+</div>
+</div>
+<div class="relative hidden md:block h-[600px]">
+<!-- Abstract 3D Shapes Simulation -->
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 right-0 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="grid grid-cols-2 gap-6 rotate-12">
+<div class="w-32 h-32 bg-surface-container-high border border-outline-variant rounded-xl flex items-center justify-center shadow-2xl translate-y-8">
+<span class="material-symbols-outlined text-primary text-5xl">devices</span>
+</div>
+<div class="w-40 h-40 bg-surface-container-highest border border-primary/20 rounded-2xl flex items-center justify-center shadow-2xl -translate-x-4">
+<span class="material-symbols-outlined text-tertiary text-6xl">database</span>
+</div>
+<div class="w-36 h-36 bg-surface-container-low border border-outline-variant rounded-3xl flex items-center justify-center shadow-2xl -translate-y-12">
+<span class="material-symbols-outlined text-primary text-5xl">api</span>
+</div>
+<div class="w-32 h-32 bg-surface-container-high border border-outline-variant rounded-xl flex items-center justify-center shadow-2xl translate-x-8">
+<span class="material-symbols-outlined text-secondary text-5xl">cloud</span>
+</div>
+</div>
+</div>
+<!-- Decorative Blobs -->
+<div class="absolute -z-10 top-0 right-0 opacity-20">
+<svg height="400" viewbox="0 0 200 200" width="400" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.3,-69.2,70,-58.1,78.9,-45.1C87.8,-32.1,93.9,-17.1,93.2,-2.5C92.5,12.1,85,26.2,75.4,38.9C65.8,51.6,54,62.8,40.4,70.6C26.8,78.4,11.4,82.8,-3.2,88.4C-17.8,93.9,-31.6,100.6,-44.6,97.2C-57.5,93.8,-69.5,80.3,-78.3,66.1C-87,51.9,-92.4,37.1,-93.7,22.4C-95,7.7,-92.1,-6.9,-86.6,-20.5C-81,-34.1,-72.8,-46.7,-61.7,-55.1C-50.6,-63.5,-36.5,-67.7,-23.4,-75.4C-10.3,-83.1,1.8,-94.3,15.1,-93.1C28.4,-91.9,41.1,-78.3,44.7,-76.4Z" fill="#62df7d" transform="translate(100 100)"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- O Que Eu Faço Section -->
+<section class="py-24 bg-surface-container-low diagonal-cut" id="o-que-faco">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Especialidades</span>
+<h2 class="text-4xl font-headline font-bold mt-2">Soluções que transformam</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">web</span>
+<h3 class="text-xl font-bold mb-4">Sites &amp; Landing Pages</h3>
+<p class="text-secondary leading-relaxed">Presença digital de alto impacto com foco total em conversão e performance SEO.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">smartphone</span>
+<h3 class="text-xl font-bold mb-4">Aplicativos</h3>
+<p class="text-secondary leading-relaxed">Desenvolvimento mobile nativo e híbrido para iOS e Android com UX intuitiva.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">settings_suggest</span>
+<h3 class="text-xl font-bold mb-4">Sistemas &amp; ERPs</h3>
+<p class="text-secondary leading-relaxed">Gestão empresarial personalizada para automatizar processos e centralizar dados.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">chat</span>
+<h3 class="text-xl font-bold mb-4">Bots WhatsApp</h3>
+<p class="text-secondary leading-relaxed">Atendimento automatizado inteligente integrado ao maior app de mensagens do mundo.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<h3 class="text-xl font-bold mb-4">Automações &amp; RPA</h3>
+<p class="text-secondary leading-relaxed">Elimine tarefas repetitivas e erros humanos com robôs de software eficientes.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-high p-8 group hover:bg-surface-container-highest transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block group-hover:scale-110 transition-transform">hub</span>
+<h3 class="text-xl font-bold mb-4">APIs &amp; Integrações</h3>
+<p class="text-secondary leading-relaxed">Conectividade total entre suas ferramentas favoritas e sistemas legados.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projetos Section -->
+<section class="py-24 bg-surface" id="projetos">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Portfolio</span>
+<h2 class="text-4xl font-headline font-bold mt-2">Trabalhos Selecionados</h2>
+</div>
+<div class="text-secondary text-right max-w-xs">Projetos desenvolvidos com foco em resultados reais para o cliente.</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern healthcare software interface with medical icons and clean blue and white color scheme on a laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpWeklFgxzS5OA5MQ7KveyfqRWM-kc4xObr0vDys5zYdJqK-ZGoMfCpAj4Zd1_MdZb9eW28TY0zZaFWxetAsb1Rra0Lb17RzkTNgda8AyObxpwvQ1CByvrwS4KpawT32uuJQb6C8uJKKzUooMB5HtIprMPB5yBExzL0ljgxfWlIZqlH8annB5-5V2CRGvCzTD7G6D7YDMtzJChzQTc-hP3NxmNlR6gEVFqijlA1okxK_BXBwRhbUqGEXX5AAx_muUpfv1zX6cV4Arv"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">HEALTHCARE</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Ultra Care Plus</h3>
+<p class="text-secondary text-sm mb-4">Gestão hospitalar de ponta com foco em telemedicina.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">React</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Node.js</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Architectural blueprints and digital 3D model on a high-resolution monitor with professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGmwzSEDyU7ZeA_vn4XjScZzOM1ib7NgMcGnC6npHZ6Z9fdfv23VUihQFA1JspqIC4AQP0U59U3AeK_diAx9pNbQafuB_J8o01Hsp9iCUKWUEZcFpPcTI9y1uSVuor4ObGTrv9i3rMYqdwNPYdocZCLMgl9JZVGGcf2_WtKIAXjNK-zzm8bSJx3YYt090U9omTKLk8KW6yiTMvRuO8eHyN5zQ3V_Ng6jxNj5WknRNIPp1hvVsXclhC7ABYuEoNqaIOQNYgxNV1KN1"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">ARCHITECTURE</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Arch Blueprint</h3>
+<p class="text-secondary text-sm mb-4">Plataforma de visualização 3D para grandes construtoras.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Three.js</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Vue 3</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Luxury beauty products on a minimalist shelf with soft lighting and elegant typography in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTeiKtVZ_5UPPjW6JlVHveb85iCyzGvOputvNWA83tlcfPHgvH9XFr2iW-8Ly3N-Y5W8geT2riETVh9lfs1zbwLXpfzRz5o1ZApyRUrabrhgW9H-FcYWk_uh0MI-frOkGvh7rbRxdjVkOkngLXYuhLEbPH7CbEIuccKM-OsTKDlz-E3rbAzi6P5Z3qKFE2Bt49xIQfxkaTQUfgStPp8rbVlm0czBWgcaEYqOnZk_SkEMEYMoO2-6Lm8OJ6G1smMqdGiafRPnt7NITt"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">BEAUTY</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Rosyhabi Beauty Flow</h3>
+<p class="text-secondary text-sm mb-4">E-commerce de alto luxo com automação de estoque.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Next.js</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">PostgreSQL</span>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern restaurant digital menu on a tablet with vibrant food photography and clean layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdPC2OvvkshzVxOyDr95gmCwRbXg9JTh9juigi53OBKuqIJZW0gWpRekTO5tTwjdABETtdBh38teQel4QCRCUfHFjWalfG15_yYYHRa2ZcevBrOsmTX2NMKLB0x1_SdTe506jIG_a3f1dOuhb4hAzfCaK0H9G_AIlFkO9tXbw5YVU0FROnKtUHEsBOs3H1gPo1MNsb-8vqSt4iHJDhlFygDC64ke4pShr3bfawFqBWjUFwG23yvgASli_pF-DYdg3fDXtvjgKDhXoy"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">GASTRONOMY</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Rei do Menu</h3>
+<p class="text-secondary text-sm mb-4">Sistema de cardápio digital dinâmico para restaurantes.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">TypeScript</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Fastify</span>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Nutrition app dashboard on a smartphone showing calorie intake and macro nutrients in colorful charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiT2bb143JqE8z4wxBYja-UBlNSNTyoxK3Y32vV8pBjTBZOYSh6rJIQjvlJvQW_BCLYW4EtgX3O69dEGok_k_maQYVBjhQTeOfOOeyMMWej-EG8HQxCGKb5cad8pjv5XXVEL7C3zpik6piwHnW7KT9-tiQJtGbXw8nBuPc9amvPBpnD2kIg_2CPLpZD3VU5q7g4DbOFvyde5xzRfiO5gqFWBpRZjp5uI0VncqEm4gSV-WTAQ1YI-JHlOaZot-kVvcsHkPO1lbD6yX1"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">HEALTH</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Nutri Balance</h3>
+<p class="text-secondary text-sm mb-4">App de nutrição com cálculo inteligente de macros.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">React Native</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Firebase</span>
+</div>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="bg-surface-container-low overflow-hidden group">
+<div class="aspect-video bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Creative community platform interface with vibrant colors and artistic abstract elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF29bI-bQcBqRVFxyUon0-4UIMJ_KwpxmkrrQ89hC5QKI5wtN1T7-ecXB97HOGHr-nYoKdVm8A5e27Q_8x0puz0HF-kugFt5Q1gNRQPE58ZzVPAQYDwUALzdVjWHLS24uUOx6194Fd61VoioxtaBKcGNxPKyle9KV2LRT7WxlWrNqcjofEKiXstHa_JBFpMRr1UyESkjoTJO2L3h2pHAQ6B_YZey7cBuRiifDvz00rxZBPI2iozDxL4f9fRqqrhvsewShhdjB1a11p"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded">CREATIVE</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Gentle Wombats</h3>
+<p class="text-secondary text-sm mb-4">Comunidade NFT com integração de carteira Web3.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Solidity</span>
+<span class="text-[10px] text-primary border border-primary/30 px-2 py-0.5 rounded">Web3.js</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Depoimentos Section -->
+<section class="py-24 bg-surface-container-lowest diagonal-cut-reverse">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Feedback</span>
+<h2 class="text-4xl font-headline font-bold mt-2 mb-16">Resultados que falam</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="bg-surface-container-low p-12 text-left relative">
+<span class="material-symbols-outlined text-tertiary text-6xl absolute -top-8 -left-4 opacity-30">format_quote</span>
+<p class="text-xl italic text-on-surface mb-8">"O Rauan transformou nossa operação com o novo ERP. Reduzimos o tempo de processamento manual em 70% em apenas dois meses."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">MC</div>
+<div>
+<p class="font-bold">Marcos Costa</p>
+<p class="text-sm text-secondary">CEO na Inova Solutions</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 text-left relative">
+<span class="material-symbols-outlined text-tertiary text-6xl absolute -top-8 -left-4 opacity-30">format_quote</span>
+<p class="text-xl italic text-on-surface mb-8">"A landing page desenvolvida superou todas as expectativas de conversão. O design é impecável e a performance é incrível."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">AL</div>
+<div>
+<p class="font-bold">Ana Luíza</p>
+<p class="text-sm text-secondary">Marketing Manager na Rosyhabi</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sobre Mim & Timeline -->
+<section class="py-24 bg-surface relative" id="sobre">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Biografia</span>
+<h2 class="text-4xl font-headline font-bold mt-2 mb-6">Focado em código limpo e impacto real.</h2>
+<div class="space-y-4 text-secondary leading-relaxed">
+<p>Sou Rauan Neves, desenvolvedor Fullstack apaixonado por transformar problemas complexos em soluções digitais elegantes e eficientes.</p>
+<p>Com vasta experiência no ecossistema JavaScript/TypeScript, foco em entregar sistemas que não apenas funcionam, mas impulsionam o crescimento de negócios.</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>rauanconceicao789@gmail.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+55 75 99112-1519</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span> Experiência
+                </h3>
+<div class="space-y-8 border-l-2 border-surface-container-high pl-8 relative">
+<div class="relative">
+<div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+<h4 class="font-bold text-on-surface">Agenda Inova</h4>
+<p class="text-sm text-primary mb-2">Lead Developer</p>
+<p class="text-sm text-secondary">Liderança técnica e desenvolvimento de arquitetura de microsserviços.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-surface-container-high border-4 border-surface"></div>
+<h4 class="font-bold text-on-surface">Cluster Vet</h4>
+<p class="text-sm text-primary mb-2">Fullstack Developer</p>
+<p class="text-sm text-secondary">Desenvolvimento de sistemas de gestão clínica e integrações de API.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-surface-container-high border-4 border-surface"></div>
+<h4 class="font-bold text-on-surface">ZC Net</h4>
+<p class="text-sm text-primary mb-2">Frontend Developer</p>
+<p class="text-sm text-secondary">Criação de interfaces responsivas e otimização de performance client-side.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Arsenal</span>
+<h2 class="text-4xl font-headline font-bold mt-2">Tecnologias que domino</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 text-center hover:border-primary/50 transition-colors">
+<p class="text-xs text-primary font-bold uppercase mb-4 tracking-tighter">Frontend</p>
+<ul class="text-sm space-y-2 text-secondary">
+<li>React / Next.js</li>
+<li>Vue / Nuxt</li>
+<li>Tailwind CSS</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 text-center hover:border-primary/50 transition-colors">
+<p class="text-xs text-primary font-bold uppercase mb-4 tracking-tighter">Backend</p>
+<ul class="text-sm space-y-2 text-secondary">
+<li>Node.js</li>
+<li>Fastify / Express</li>
+<li>TypeScript</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 text-center hover:border-primary/50 transition-colors">
+<p class="text-xs text-primary font-bold uppercase mb-4 tracking-tighter">Database</p>
+<ul class="text-sm space-y-2 text-secondary">
+<li>PostgreSQL</li>
+<li>MongoDB</li>
+<li>Redis</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 text-center hover:border-primary/50 transition-colors">
+<p class="text-xs text-primary font-bold uppercase mb-4 tracking-tighter">Infra</p>
+<ul class="text-sm space-y-2 text-secondary">
+<li>AWS / GCP</li>
+<li>Docker</li>
+<li>CI/CD Pipelines</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10 text-center hover:border-primary/50 transition-colors">
+<p class="text-xs text-primary font-bold uppercase mb-4 tracking-tighter">Tools</p>
+<ul class="text-sm space-y-2 text-secondary">
+<li>Git / GitHub</li>
+<li>Figma</li>
+<li>Jira / Agile</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Contato Section -->
+<section class="py-24 bg-surface relative overflow-hidden" id="contato">
+<!-- Background Blob Decoration -->
+<div class="absolute bottom-0 right-0 opacity-10 pointer-events-none">
+<svg height="600" viewbox="0 0 200 200" width="600" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.8,-68.2C50.2,-61.1,59.3,-50.7,66.8,-39.2C74.3,-27.7,80.2,-15.1,81.1,-2.2C82,10.7,77.9,23.9,71,36.2C64.1,48.5,54.4,59.8,42.4,67.6C30.4,75.4,16.2,79.7,1.6,77.5C-13,75.3,-28.1,66.5,-40.8,57.2C-53.5,47.9,-63.9,38,-70.5,25.9C-77.1,13.8,-79.9,-0.5,-77.3,-14.2C-74.7,-27.9,-66.7,-41,-55.4,-48.3C-44.1,-55.6,-29.4,-57.1,-16.8,-64.7C-4.1,-72.3,6.5,-86.1,19.3,-86.1C32.1,-86.1,47.1,-72.4,38.8,-68.2Z" fill="#62df7d" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-20">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Contato</span>
+<h2 class="text-5xl font-headline font-bold mt-2 mb-8">Precisa de um projeto?</h2>
+<p class="text-xl text-secondary leading-relaxed mb-12">Vamos transformar sua ideia em realidade digital. Preencha o formulário e receba uma proposta personalizada.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Email</p>
+<p class="text-on-surface">rauanconceicao789@gmail.com</p>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase tracking-widest mb-2">Localização</p>
+<p class="text-on-surface">Bahia, Brasil</p>
+</div>
+</div>
+</div>
+<form class="bg-surface-container-low p-10 space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-secondary">Nome</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface py-3 px-4" placeholder="Seu nome" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-secondary">Email</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface py-3 px-4" placeholder="seu@email.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-secondary">Tipo de Projeto</label>
+<select class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface py-3 px-4">
+<option>Site / Landing Page</option>
+<option>Aplicativo Mobile</option>
+<option>Sistema / ERP</option>
+<option>Automação / Bot</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-secondary">Mensagem</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface py-3 px-4" placeholder="Conte-nos sobre sua necessidade..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-bold text-lg hover:shadow-[0_0_30px_rgba(28,166,77,0.3)] transition-all" type="submit">
+                        Solicitar Proposta
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#070e1c] w-full border-t border-[#232a39]/30">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 py-12 gap-6">
+<span class="text-lg font-bold text-[#62df7d]">Rauan Neves</span>
+<div class="flex gap-8">
+<a class="text-[#c0c8cc] hover:text-[#ffb4a2] transition-colors font-['Inter'] text-sm" href="#">GitHub</a>
+<a class="text-[#c0c8cc] hover:text-[#ffb4a2] transition-colors font-['Inter'] text-sm" href="#">LinkedIn</a>
+<a class="text-[#c0c8cc] hover:text-[#ffb4a2] transition-colors font-['Inter'] text-sm" href="https://wa.me/5575991121519">WhatsApp</a>
+<a class="text-[#c0c8cc] hover:text-[#ffb4a2] transition-colors font-['Inter'] text-sm" href="#">Privacidade</a>
+</div>
+<p class="text-[#c0c8cc] font-['Inter'] text-sm">© 2024 Rauan Neves. Todos os direitos reservados.</p>
+</div>
+</footer>
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-[60]" href="https://wa.me/5575991121519">
+<svg class="w-8 h-8 fill-white" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+</body></html>
