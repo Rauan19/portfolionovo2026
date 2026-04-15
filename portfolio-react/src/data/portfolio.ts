@@ -1,3 +1,8 @@
+import casadopetImg from '../assets/casadopet.png'
+import iagoVeiculosImg from '../assets/iagoveiculos.png'
+import academiaImg from '../assets/academia.png'
+import oficinaImg from '../assets/oficina.png'
+
 export const GITHUB_URL = 'https://github.com/Rauan19'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/rauan-neves/'
 export const EMAIL = 'rauanconceicao789@gmail.com'
@@ -53,37 +58,44 @@ export const services = [
 
 export const projects = [
   {
-    category: 'HEALTHCARE',
-    title: 'Ultra Care Plus – Clínica Médica',
+    category: 'AUTOMOTIVE',
+    title: 'Iago Veículos',
     description:
-      'Sistema completo para clínica, permitindo que pacientes escolham profissionais, visualizem perfil, chequem disponibilidade e agendem horários online.',
-    image: '/projects/projetoultraclinica.png',
-    imageAlt:
-      'Interface de sistema para clínica médica com agendamento e perfis de profissionais',
-    tags: ['React', 'Node.js'],
-    link: 'https://preview--ultra-care-plus.lovable.app/',
+      'Site para apresentação de estoque, divulgação de veículos e captação de leads com navegação rápida e foco em conversão.',
+    image: iagoVeiculosImg,
+    imageAlt: 'Página do site Iago Veículos com vitrine de carros',
+    tags: ['React', 'Vite'],
+    link: 'https://iagoveiculos.com.br/',
   },
   {
-    category: 'ARCHITECTURE',
-    title: 'Arch Blueprint – Plataforma para Arquitetos',
+    category: 'FITNESS',
+    title: 'Arena Fit',
     description:
-      'Sistema para arquitetos exibirem projetos, plantas e agendas, permitindo consulta de informações técnicas e gerenciamento de agendas.',
-    image: '/projects/projetoplantaarquiteto.png',
-    imageAlt:
-      'Plataforma com plantas e visualização de projetos de arquitetura em tela',
-    tags: ['Three.js', 'Vue 3'],
-    link: 'https://preview--arch-blueprint-app.lovable.app/',
+      'Landing page para academia com foco em apresentação de planos, benefícios e chamada para ação para novos alunos.',
+    image: academiaImg,
+    imageAlt: 'Página do site Arena Fit (academia) com informações e planos',
+    tags: ['React', 'Vite'],
+    link: 'https://arenafit.vercel.app/',
   },
   {
-    category: 'BEAUTY',
-    title: 'Rosyhabi Beauty Flow – Clínica Estética',
+    category: 'AUTOMOTIVE',
+    title: 'Moderna Autopeças',
     description:
-      'Plataforma moderna para clínica de estética facial, com apresentação de serviços, profissionais e agendamentos online.',
-    image: '/projects/projetorosyhabi.png',
-    imageAlt:
-      'Site de clínica de estética com serviços e agendamento',
-    tags: ['Next.js', 'PostgreSQL'],
-    link: 'https://preview--rosyhabi-beauty-flow.lovable.app/',
+      'Site institucional para autopeças/oficina, destacando catálogo, serviços e canais de contato para orçamentos.',
+    image: oficinaImg,
+    imageAlt: 'Página do site Moderna Autopeças com destaque para serviços e peças',
+    tags: ['React', 'Vite'],
+    link: 'https://autopecas-tawny.vercel.app/',
+  },
+  {
+    category: 'PET',
+    title: 'Casa do Pet',
+    description:
+      'Landing page moderna para pet shop, destacando serviços e chamada para contato com foco em presença digital e conversão.',
+    image: casadopetImg,
+    imageAlt: 'Página do site Casa do Pet com serviços para pets',
+    tags: ['React', 'Vite'],
+    link: 'https://cadadopet.vercel.app/',
   },
   {
     category: 'GASTRONOMY',
@@ -95,39 +107,6 @@ export const projects = [
       'Cardápio digital de restaurante com fotos de pratos',
     tags: ['TypeScript', 'Fastify'],
     link: 'https://preview--rei-do-menu.lovable.app/cardapio',
-  },
-  {
-    category: 'HEALTH',
-    title: 'Nutri Balance – Plano Alimentar',
-    description:
-      'Aplicação desenvolvida para nutricionistas criarem planos alimentares personalizados, gerando cardápios e recomendações para o paciente.',
-    image: '/projects/projetonutricionista.png',
-    imageAlt:
-      'Aplicação de nutrição com planos alimentares e cardápios',
-    tags: ['React Native', 'Firebase'],
-    link: 'https://preview--nutri-balance-plan-maker.lovable.app/',
-  },
-  {
-    category: 'GASTRONOMY',
-    title: 'Gentle Wombats – Restaurante com QR Code',
-    description:
-      'Sistema para restaurantes com pedidos via QR Code na mesa, acompanhamento em tempo real e opção delivery.',
-    image: '/projects/fotoprojetorestaurante.png',
-    imageAlt:
-      'Experiência de pedido em restaurante com cardápio digital',
-    tags: ['React', 'Realtime'],
-    link: 'https://gentle-wombats-hunt.lindy.site/',
-  },
-  {
-    category: 'GASTRONOMY',
-    title: 'Gentle Wombats – Cardápio Delivery',
-    description:
-      'Versão focada apenas no cardápio do restaurante, permitindo escolher itens e fazer pedidos para mesa ou entrega.',
-    image: '/projects/proejtopizza.png',
-    imageAlt:
-      'Cardápio online para pedidos de mesa ou delivery',
-    tags: ['React', 'E-commerce'],
-    link: 'https://gentle-wombats-hunt.lindy.site/cardapio',
   },
 ] as const
 

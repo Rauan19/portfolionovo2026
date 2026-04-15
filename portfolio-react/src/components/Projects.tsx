@@ -38,16 +38,6 @@ export function Projects() {
               <div className="p-4 sm:p-6">
                 <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
                 <p className="mb-4 text-sm text-secondary">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded border border-primary/30 px-2 py-0.5 text-[10px] text-primary"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
                 <a
                   href={project.link}
                   target="_blank"
