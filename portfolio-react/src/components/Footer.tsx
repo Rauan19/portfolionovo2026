@@ -1,5 +1,5 @@
 import logoRau from '../assets/logorau.png'
-import { WHATSAPP_URL } from '../data/portfolio'
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL } from '../data/portfolio'
 
 export function Footer() {
   return (
@@ -16,13 +16,17 @@ export function Footer() {
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-8">
           <a
             className="font-body text-sm text-[#c0c8cc] transition-colors hover:text-[#ffb4a2]"
-            href="#"
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>
           <a
             className="font-body text-sm text-[#c0c8cc] transition-colors hover:text-[#ffb4a2]"
-            href="#"
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noreferrer"
           >
             LinkedIn
           </a>

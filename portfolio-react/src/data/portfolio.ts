@@ -1,3 +1,9 @@
+export const GITHUB_URL = 'https://github.com/Rauan19'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/rauan-neves/'
+export const EMAIL = 'rauanconceicao789@gmail.com'
+export const PHONE_DISPLAY = '(75) 98828-0737'
+export const PHONE_TEL = 'tel:+5575988280737'
+
 export const heroTags = [
   'React',
   'Vue',
@@ -48,63 +54,80 @@ export const services = [
 export const projects = [
   {
     category: 'HEALTHCARE',
-    title: 'Ultra Care Plus',
-    description: 'Gestão hospitalar de ponta com foco em telemedicina.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBpWeklFgxzS5OA5MQ7KveyfqRWM-kc4xObr0vDys5zYdJqK-ZGoMfCpAj4Zd1_MdZb9eW28TY0zZaFWxetAsb1Rra0Lb17RzkTNgda8AyObxpwvQ1CByvrwS4KpawT32uuJQb6C8uJKKzUooMB5HtIprMPB5yBExzL0ljgxfWlIZqlH8annB5-5V2CRGvCzTD7G6D7YDMtzJChzQTc-hP3NxmNlR6gEVFqijlA1okxK_BXBwRhbUqGEXX5AAx_muUpfv1zX6cV4Arv',
+    title: 'Ultra Care Plus – Clínica Médica',
+    description:
+      'Sistema completo para clínica, permitindo que pacientes escolham profissionais, visualizem perfil, chequem disponibilidade e agendem horários online.',
+    image: '/projects/projetoultraclinica.png',
     imageAlt:
-      'Modern healthcare software interface with medical icons and clean blue and white color scheme on a laptop screen',
+      'Interface de sistema para clínica médica com agendamento e perfis de profissionais',
     tags: ['React', 'Node.js'],
+    link: 'https://preview--ultra-care-plus.lovable.app/',
   },
   {
     category: 'ARCHITECTURE',
-    title: 'Arch Blueprint',
-    description: 'Plataforma de visualização 3D para grandes construtoras.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAVGmwzSEDyU7ZeA_vn4XjScZzOM1ib7NgMcGnC6npHZ6Z9fdfv23VUihQFA1JspqIC4AQP0U59U3AeK_diAx9pNbQafuB_J8o01Hsp9iCUKWUEZcFpPcTI9y1uSVuor4ObGTrv9i3rMYqdwNPYdocZCLMgl9JZVGGcf2_WtKIAXjNK-zzm8bSJx3YYt090U9omTKLk8KW6yiTMvRuO8eHyN5zQ3V_Ng6jxNj5WknRNIPp1hvVsXclhC7ABYuEoNqaIOQNYgxNV1KN1',
+    title: 'Arch Blueprint – Plataforma para Arquitetos',
+    description:
+      'Sistema para arquitetos exibirem projetos, plantas e agendas, permitindo consulta de informações técnicas e gerenciamento de agendas.',
+    image: '/projects/projetoplantaarquiteto.png',
     imageAlt:
-      'Architectural blueprints and digital 3D model on a high-resolution monitor with professional lighting',
+      'Plataforma com plantas e visualização de projetos de arquitetura em tela',
     tags: ['Three.js', 'Vue 3'],
+    link: 'https://preview--arch-blueprint-app.lovable.app/',
   },
   {
     category: 'BEAUTY',
-    title: 'Rosyhabi Beauty Flow',
-    description: 'E-commerce de alto luxo com automação de estoque.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCTeiKtVZ_5UPPjW6JlVHveb85iCyzGvOputvNWA83tlcfPHgvH9XFr2iW-8Ly3N-Y5W8geT2riETVh9lfs1zbwLXpfzRz5o1ZApyRUrabrhgW9H-FcYWk_uh0MI-frOkGvh7rbRxdjVkOkngLXYuhLEbPH7CbEIuccKM-OsTKDlz-E3rbAzi6P5Z3qKFE2Bt49xIQfxkaTQUfgStPp8rbVlm0czBWgcaEYqOnZk_SkEMEYMoO2-6Lm8OJ6G1smMqdGiafRPnt7NITt',
+    title: 'Rosyhabi Beauty Flow – Clínica Estética',
+    description:
+      'Plataforma moderna para clínica de estética facial, com apresentação de serviços, profissionais e agendamentos online.',
+    image: '/projects/projetorosyhabi.png',
     imageAlt:
-      'Luxury beauty products on a minimalist shelf with soft lighting and elegant typography in the background',
+      'Site de clínica de estética com serviços e agendamento',
     tags: ['Next.js', 'PostgreSQL'],
+    link: 'https://preview--rosyhabi-beauty-flow.lovable.app/',
   },
   {
     category: 'GASTRONOMY',
-    title: 'Rei do Menu',
-    description: 'Sistema de cardápio digital dinâmico para restaurantes.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBdPC2OvvkshzVxOyDr95gmCwRbXg9JTh9juigi53OBKuqIJZW0gWpRekTO5tTwjdABETtdBh38teQel4QCRCUfHFjWalfG15_yYYHRa2ZcevBrOsmTX2NMKLB0x1_SdTe506jIG_a3f1dOuhb4hAzfCaK0H9G_AIlFkO9tXbw5YVU0FROnKtUHEsBOs3H1gPo1MNsb-8vqSt4iHJDhlFygDC64ke4pShr3bfawFqBWjUFwG23yvgASli_pF-DYdg3fDXtvjgKDhXoy',
+    title: 'Rei do Menu – Cardápio Interativo',
+    description:
+      'Sistema completo de cardápio digital com escolha de hambúrgueres, bebidas e pedidos tanto para mesa quanto para delivery.',
+    image: '/projects/projetoburger.png',
     imageAlt:
-      'Modern restaurant digital menu on a tablet with vibrant food photography and clean layout',
+      'Cardápio digital de restaurante com fotos de pratos',
     tags: ['TypeScript', 'Fastify'],
+    link: 'https://preview--rei-do-menu.lovable.app/cardapio',
   },
   {
     category: 'HEALTH',
-    title: 'Nutri Balance',
-    description: 'App de nutrição com cálculo inteligente de macros.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCiT2bb143JqE8z4wxBYja-UBlNSNTyoxK3Y32vV8pBjTBZOYSh6rJIQjvlJvQW_BCLYW4EtgX3O69dEGok_k_maQYVBjhQTeOfOOeyMMWej-EG8HQxCGKb5cad8pjv5XXVEL7C3zpik6piwHnW7KT9-tiQJtGbXw8nBuPc9amvPBpnD2kIg_2CPLpZD3VU5q7g4DbOFvyde5xzRfiO5gqFWBpRZjp5uI0VncqEm4gSV-WTAQ1YI-JHlOaZot-kVvcsHkPO1lbD6yX1',
+    title: 'Nutri Balance – Plano Alimentar',
+    description:
+      'Aplicação desenvolvida para nutricionistas criarem planos alimentares personalizados, gerando cardápios e recomendações para o paciente.',
+    image: '/projects/projetonutricionista.png',
     imageAlt:
-      'Nutrition app dashboard on a smartphone showing calorie intake and macro nutrients in colorful charts',
+      'Aplicação de nutrição com planos alimentares e cardápios',
     tags: ['React Native', 'Firebase'],
+    link: 'https://preview--nutri-balance-plan-maker.lovable.app/',
   },
   {
-    category: 'CREATIVE',
-    title: 'Gentle Wombats',
-    description: 'Comunidade NFT com integração de carteira Web3.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBF29bI-bQcBqRVFxyUon0-4UIMJ_KwpxmkrrQ89hC5QKI5wtN1T7-ecXB97HOGHr-nYoKdVm8A5e27Q_8x0puz0HF-kugFt5Q1gNRQPE58ZzVPAQYDwUALzdVjWHLS24uUOx6194Fd61VoioxtaBKcGNxPKyle9KV2LRT7WxlWrNqcjofEKiXstHa_JBFpMRr1UyESkjoTJO2L3h2pHAQ6B_YZey7cBuRiifDvz00rxZBPI2iozDxL4f9fRqqrhvsewShhdjB1a11p',
+    category: 'GASTRONOMY',
+    title: 'Gentle Wombats – Restaurante com QR Code',
+    description:
+      'Sistema para restaurantes com pedidos via QR Code na mesa, acompanhamento em tempo real e opção delivery.',
+    image: '/projects/fotoprojetorestaurante.png',
     imageAlt:
-      'Creative community platform interface with vibrant colors and artistic abstract elements',
-    tags: ['Solidity', 'Web3.js'],
+      'Experiência de pedido em restaurante com cardápio digital',
+    tags: ['React', 'Realtime'],
+    link: 'https://gentle-wombats-hunt.lindy.site/',
+  },
+  {
+    category: 'GASTRONOMY',
+    title: 'Gentle Wombats – Cardápio Delivery',
+    description:
+      'Versão focada apenas no cardápio do restaurante, permitindo escolher itens e fazer pedidos para mesa ou entrega.',
+    image: '/projects/proejtopizza.png',
+    imageAlt:
+      'Cardápio online para pedidos de mesa ou delivery',
+    tags: ['React', 'E-commerce'],
+    link: 'https://gentle-wombats-hunt.lindy.site/cardapio',
   },
 ] as const
 
@@ -122,30 +145,6 @@ export const testimonials = [
     initials: 'AL',
     name: 'Ana Luíza',
     role: 'Marketing Manager na Rosyhabi',
-  },
-] as const
-
-export const experience = [
-  {
-    title: 'Agenda Inova',
-    role: 'Lead Developer',
-    description:
-      'Liderança técnica e desenvolvimento de arquitetura de microsserviços.',
-    active: true,
-  },
-  {
-    title: 'Cluster Vet',
-    role: 'Fullstack Developer',
-    description:
-      'Desenvolvimento de sistemas de gestão clínica e integrações de API.',
-    active: false,
-  },
-  {
-    title: 'ZC Net',
-    role: 'Frontend Developer',
-    description:
-      'Criação de interfaces responsivas e otimização de performance client-side.',
-    active: false,
   },
 ] as const
 

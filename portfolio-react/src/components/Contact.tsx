@@ -1,4 +1,12 @@
 import type { FormEvent } from 'react'
+import {
+  EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  WHATSAPP_URL,
+} from '../data/portfolio'
 
 export function Contact() {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -41,7 +49,36 @@ export function Contact() {
                 <p className="mb-2 text-xs font-bold tracking-widest text-primary uppercase">
                   Email
                 </p>
-                <p className="text-on-surface">rauanconceicao789@gmail.com</p>
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
+                >
+                  {EMAIL}
+                </a>
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-bold tracking-widest text-primary uppercase">
+                  WhatsApp
+                </p>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
+                >
+                  (75) 99112-1519
+                </a>
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-bold tracking-widest text-primary uppercase">
+                  Telefone
+                </p>
+                <a
+                  href={PHONE_TEL}
+                  className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
+                >
+                  {PHONE_DISPLAY}
+                </a>
               </div>
               <div>
                 <p className="mb-2 text-xs font-bold tracking-widest text-primary uppercase">
@@ -49,6 +86,32 @@ export function Contact() {
                 </p>
                 <p className="text-on-surface">Bahia, Brasil</p>
               </div>
+            </div>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-neon-social rounded-lg px-4 py-2 text-sm"
+              >
+                GitHub
+              </a>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-neon-social rounded-lg px-4 py-2 text-sm"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-neon-social rounded-lg px-4 py-2 text-sm"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
           <form
@@ -104,10 +167,7 @@ export function Contact() {
                 className="w-full border-none bg-surface-container-lowest px-4 py-3 text-on-surface focus:ring-1 focus:ring-primary focus:outline-none"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full bg-primary-container py-4 text-lg font-bold text-on-primary-container transition-all hover:shadow-[0_0_30px_rgba(28,166,77,0.3)]"
-            >
+            <button type="submit" className="btn-neon-solid w-full py-4 text-lg">
               Solicitar Proposta
             </button>
           </form>

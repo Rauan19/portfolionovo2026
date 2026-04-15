@@ -3,7 +3,7 @@ import { WHATSAPP_URL } from '../data/portfolio'
 export function WhatsAppFab() {
   return (
     <a
-      className="fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-2xl transition-transform hover:scale-110 sm:right-8 sm:bottom-8 sm:h-16 sm:w-16"
+      className="btn-neon-whatsapp fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] sm:right-8 sm:bottom-8 sm:h-16 sm:w-16"
       href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"

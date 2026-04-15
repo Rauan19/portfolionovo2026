@@ -22,85 +22,85 @@ const chocoDrops: CSSProperties[] = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh items-center overflow-hidden pt-20 pb-12 hero-gradient sm:pb-16 md:min-h-screen md:pb-0">
+    <section className="relative flex min-h-dvh items-center overflow-hidden pt-20 pb-12 hero-gradient sm:pb-14 md:min-h-[85vh] md:pt-16 md:pb-6">
       <div className="hero-choco-drops" aria-hidden="true">
         {chocoDrops.map((style, i) => (
           <span key={i} className="hero-choco-drop" style={style} />
         ))}
       </div>
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:px-8 md:grid-cols-2">
-        <div className="space-y-6 sm:space-y-8">
-          <div className="inline-flex flex-wrap gap-2">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 px-4 sm:gap-8 sm:px-6 lg:px-8 md:grid-cols-2 md:gap-8 md:items-center">
+        <div className="order-2 space-y-4 md:order-1 md:space-y-5">
+          <div className="inline-flex flex-wrap gap-1.5 md:gap-2">
             {heroTags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-lg bg-surface-container-high px-2.5 py-1 text-[10px] font-bold tracking-widest text-primary uppercase sm:px-3 sm:text-xs"
+                className="rounded-md bg-surface-container-high px-2 py-0.5 text-[9px] font-bold tracking-widest text-primary uppercase md:px-2.5 md:py-1 md:text-[10px]"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <h1 className="font-headline text-3xl leading-[1.1] font-bold tracking-tighter text-on-surface sm:text-4xl sm:leading-tight md:text-6xl lg:text-7xl">
+          <h1 className="font-headline text-2xl leading-[1.2] font-bold tracking-tight text-on-surface md:text-4xl md:leading-tight lg:text-[2.75rem]">
             Eu construo sistemas que{' '}
             <span className="text-primary">aceleram negócios</span>
             <span className="text-on-surface">  apps, sites e ERPs.</span>
           </h1>
-          <p className="max-w-lg text-base leading-relaxed text-secondary sm:text-lg md:text-xl">
+          <p className="max-w-md text-sm leading-relaxed text-secondary md:text-[1.05rem]">
             Soluções fullstack de alta performance focadas em escalabilidade e
             experiência do usuário. Do código à infraestrutura.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+          <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap md:gap-3">
             <a
-              className="flex w-full items-center justify-center gap-2 bg-primary-container px-6 py-3.5 text-center text-sm font-bold text-on-primary-container transition-transform hover:translate-y-[-2px] sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+              className="btn-neon-solid flex w-full items-center justify-center gap-2 px-5 py-3 text-center text-xs sm:w-auto md:px-6 md:py-3 md:text-sm"
               href="#projetos"
             >
               Ver Projetos{' '}
-              <span className="material-symbols-outlined text-xl sm:text-2xl">
+              <span className="material-symbols-outlined text-lg md:text-xl">
                 arrow_forward
               </span>
             </a>
             <a
-              className="flex w-full items-center justify-center border border-outline-variant px-6 py-3.5 text-center text-sm font-bold text-on-surface transition-colors hover:bg-surface-container-high sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+              className="btn-neon-outline flex w-full items-center justify-center px-5 py-3 text-center text-xs sm:w-auto md:px-6 md:py-3 md:text-sm"
               href="#contato"
             >
               Entrar em Contato
             </a>
           </div>
         </div>
-        <div className="relative hidden h-[600px] md:block">
-          <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-          <div className="absolute top-1/2 right-0 h-48 w-48 rounded-full bg-tertiary/10 blur-3xl" />
+        <div className="relative order-1 mx-auto mb-2 h-[min(300px,62vw)] w-full max-w-[360px] sm:mb-4 sm:h-[340px] sm:max-w-[420px] md:order-2 md:mx-0 md:mb-0 md:mt-0 md:h-[420px] md:max-w-none lg:h-[460px]">
+          <div className="absolute top-1/4 left-1/4 h-40 w-40 rounded-full bg-primary/10 blur-3xl sm:h-48 sm:w-48 md:left-1/4" />
+          <div className="absolute top-1/2 right-0 h-28 w-28 rounded-full bg-tertiary/10 blur-3xl sm:h-36 sm:w-36" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="grid rotate-12 grid-cols-2 gap-6">
-              <div className="flex h-32 w-32 translate-y-8 items-center justify-center rounded-xl border border-outline-variant bg-surface-container-high shadow-2xl">
-                <span className="material-symbols-outlined text-5xl text-primary">
+            <div className="hero-cards-orbit grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="flex h-[5.25rem] w-[5.25rem] translate-y-5 items-center justify-center rounded-lg border border-outline-variant bg-surface-container-high shadow-xl sm:h-28 sm:w-28 sm:translate-y-6">
+                <span className="material-symbols-outlined text-3xl text-primary sm:text-[2.5rem]">
                   devices
                 </span>
               </div>
-              <div className="flex h-40 w-40 -translate-x-4 items-center justify-center rounded-2xl border border-primary/20 bg-surface-container-highest shadow-2xl">
-                <span className="material-symbols-outlined text-6xl text-tertiary">
+              <div className="flex h-24 w-24 -translate-x-2 items-center justify-center rounded-xl border border-primary/20 bg-surface-container-highest shadow-xl sm:h-32 sm:w-32 sm:-translate-x-3">
+                <span className="material-symbols-outlined text-4xl text-tertiary sm:text-[2.75rem]">
                   database
                 </span>
               </div>
-              <div className="flex h-36 w-36 -translate-y-12 items-center justify-center rounded-3xl border border-outline-variant bg-surface-container-low shadow-2xl">
-                <span className="material-symbols-outlined text-5xl text-primary">
+              <div className="flex h-24 w-24 -translate-y-6 items-center justify-center rounded-2xl border border-outline-variant bg-surface-container-low shadow-xl sm:h-28 sm:w-28 sm:-translate-y-8">
+                <span className="material-symbols-outlined text-3xl text-primary sm:text-[2.5rem]">
                   api
                 </span>
               </div>
-              <div className="flex h-32 w-32 translate-x-8 items-center justify-center rounded-xl border border-outline-variant bg-surface-container-high shadow-2xl">
-                <span className="material-symbols-outlined text-5xl text-secondary">
+              <div className="flex h-[5.25rem] w-[5.25rem] translate-x-4 items-center justify-center rounded-lg border border-outline-variant bg-surface-container-high shadow-xl sm:h-28 sm:w-28 sm:translate-x-6">
+                <span className="material-symbols-outlined text-3xl text-secondary sm:text-[2.5rem]">
                   cloud
                 </span>
               </div>
             </div>
           </div>
-          <div className="pointer-events-none absolute -z-10 top-0 right-0 opacity-20">
+          <div className="pointer-events-none absolute -z-10 top-1/2 left-1/2 w-[min(100%,260px)] max-w-[260px] -translate-x-1/2 -translate-y-1/2 opacity-20 sm:w-auto sm:max-w-none md:top-0 md:right-0 md:left-auto md:translate-x-0 md:translate-y-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="400"
-              height="400"
+              width="320"
+              height="320"
               viewBox="0 0 200 200"
-              className="max-h-[280px] max-w-[min(100%,280px)] md:max-h-none md:max-w-none"
+              className="mx-auto max-h-[180px] max-w-[180px] sm:max-h-[220px] sm:max-w-[220px] md:mx-0 md:max-h-[260px] md:max-w-[260px]"
             >
               <path
                 fill="#62df7d"

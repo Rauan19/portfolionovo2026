@@ -187,3 +187,210 @@
     display: none;
   }
 }
+
+/* Grid de ícones da hero: giro lento só no mobile / abaixo de md */
+@keyframes hero-cards-orbit {
+  from {
+    transform: rotate(12deg);
+  }
+  to {
+    transform: rotate(372deg);
+  }
+}
+
+.hero-cards-orbit {
+  transform-origin: center center;
+  animation: hero-cards-orbit 32s linear infinite;
+  will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .hero-cards-orbit {
+    animation: none;
+    transform: rotate(12deg);
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cards-orbit {
+    animation: none;
+    transform: rotate(12deg);
+    will-change: auto;
+  }
+}
+
+/* Botões com brilho fluorescente / neon (verde do tema) */
+@layer components {
+  .btn-neon-solid {
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      #22c55e 0%,
+      #1ca64d 40%,
+      #15803d 100%
+    );
+    color: #003111;
+    font-weight: 700;
+    transition:
+      box-shadow 0.35s ease,
+      transform 0.25s ease,
+      filter 0.25s ease;
+    box-shadow:
+      0 0 0 1px rgba(127, 252, 151, 0.55),
+      0 4px 18px rgba(28, 166, 77, 0.45),
+      0 0 28px rgba(98, 223, 125, 0.35);
+  }
+
+  .btn-neon-solid:hover {
+    filter: brightness(1.1) saturate(1.05);
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 0 1px rgba(127, 252, 151, 0.9),
+      0 6px 26px rgba(28, 166, 77, 0.55),
+      0 0 42px rgba(98, 223, 125, 0.55),
+      0 0 72px rgba(98, 223, 125, 0.22);
+  }
+
+  .btn-neon-solid:active {
+    transform: translateY(0);
+    filter: brightness(0.98);
+  }
+
+  .btn-neon-solid:focus-visible {
+    outline: 2px solid #7ffc97;
+    outline-offset: 3px;
+  }
+
+  .btn-neon-outline {
+    border: 1px solid rgba(98, 223, 125, 0.45);
+    background: rgba(15, 20, 35, 0.75);
+    color: #dce2f6;
+    font-weight: 700;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.35s ease,
+      transform 0.25s ease,
+      color 0.25s ease,
+      background-color 0.25s ease;
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  .btn-neon-outline:hover {
+    border-color: rgba(127, 252, 151, 0.85);
+    color: #7ffc97;
+    background: rgba(98, 223, 125, 0.08);
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 22px rgba(98, 223, 125, 0.35),
+      0 0 40px rgba(98, 223, 125, 0.15),
+      inset 0 0 24px rgba(98, 223, 125, 0.06);
+  }
+
+  .btn-neon-outline:focus-visible {
+    outline: 2px solid #62df7d;
+    outline-offset: 3px;
+  }
+
+  .btn-neon-project {
+    border: 1px solid rgba(98, 223, 125, 0.5);
+    background: rgba(98, 223, 125, 0.06);
+    color: #62df7d;
+    font-weight: 700;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.35s ease,
+      transform 0.25s ease,
+      background-color 0.25s ease,
+      text-shadow 0.25s ease;
+  }
+
+  .btn-neon-project:hover {
+    border-color: rgba(127, 252, 151, 0.95);
+    background: rgba(98, 223, 125, 0.14);
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 26px rgba(98, 223, 125, 0.45),
+      0 0 48px rgba(28, 166, 77, 0.2);
+    text-shadow: 0 0 14px rgba(127, 252, 151, 0.45);
+  }
+
+  .btn-neon-project:focus-visible {
+    outline: 2px solid #7ffc97;
+    outline-offset: 2px;
+  }
+
+  .btn-neon-social {
+    border: 1px solid rgba(98, 223, 125, 0.35);
+    background: rgba(15, 20, 35, 0.5);
+    color: #dce2f6;
+    font-weight: 700;
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.3s ease,
+      color 0.25s ease,
+      transform 0.2s ease;
+  }
+
+  .btn-neon-social:hover {
+    border-color: rgba(127, 252, 151, 0.75);
+    color: #7ffc97;
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 18px rgba(98, 223, 125, 0.35),
+      inset 0 0 16px rgba(98, 223, 125, 0.05);
+  }
+
+  .btn-neon-social:focus-visible {
+    outline: 2px solid #62df7d;
+    outline-offset: 2px;
+  }
+
+  .btn-neon-whatsapp {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.35s ease,
+      filter 0.25s ease;
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.35),
+      0 0 1px rgba(74, 222, 128, 0.35),
+      0 0 24px rgba(37, 211, 102, 0.45),
+      0 0 48px rgba(37, 211, 102, 0.25);
+  }
+
+  .btn-neon-whatsapp:hover {
+    transform: scale(1.08);
+    filter: brightness(1.12);
+    box-shadow:
+      0 6px 22px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(127, 252, 151, 0.5),
+      0 0 32px rgba(37, 211, 102, 0.65),
+      0 0 64px rgba(37, 211, 102, 0.35);
+  }
+
+  .btn-neon-whatsapp:focus-visible {
+    outline: 2px solid #86efac;
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-neon-solid,
+  .btn-neon-outline,
+  .btn-neon-project,
+  .btn-neon-social,
+  .btn-neon-whatsapp {
+    transition-duration: 0.01ms;
+  }
+
+  .btn-neon-solid:hover,
+  .btn-neon-outline:hover,
+  .btn-neon-project:hover,
+  .btn-neon-social:hover {
+    transform: none;
+  }
+
+  .btn-neon-whatsapp:hover {
+    transform: none;
+  }
+}

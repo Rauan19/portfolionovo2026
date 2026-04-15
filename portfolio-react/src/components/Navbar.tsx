@@ -55,7 +55,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <a
-            className="hidden bg-primary-container px-5 py-2 text-sm font-bold text-on-primary-container transition-transform hover:scale-95 active:scale-90 md:block lg:px-6"
+            className="btn-neon-solid hidden px-5 py-2 text-sm md:block lg:px-6"
             href="#contato"
           >
             Solicitar Orçamento
@@ -96,7 +96,7 @@ export function Navbar() {
             ))}
           </div>
           <a
-            className="mt-6 bg-primary-container py-4 text-center text-base font-bold text-on-primary-container"
+            className="btn-neon-solid mt-6 py-4 text-center text-base"
             href="#contato"
             onClick={() => setOpen(false)}
           >

@@ -27,7 +27,7 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={project.imageAlt}
-                  className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="rounded bg-primary/90 px-2 py-1 text-[10px] font-bold text-on-primary">
@@ -48,6 +48,15 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-neon-project mt-4 inline-flex w-full items-center justify-center gap-2 py-3 text-sm"
+                >
+                  Ver projeto
+                  <span className="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
               </div>
             </div>
           ))}
